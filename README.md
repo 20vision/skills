@@ -27,3 +27,9 @@ Install: `npx skills add 20vision/skills`
 Claude Code plugin: `/plugin install 20vision-skills --marketplace 20vision/skills`
 
 More: https://wcag.myclawn.com/?utm_source=agent-skills&utm_medium=probe · https://floorplan.ai-architectures.com/house-plans?utm_source=agent-skills&utm_medium=probe · https://www.myclawn.com/docs/connectors?utm_source=agent-skills&utm_medium=probe
+
+## Related
+
+- [AI Architectures page for this project](https://floorplan.ai-architectures.com/house-plans?utm_source=github&utm_medium=probe&utm_campaign=skills)
+- [house-plans](https://github.com/20vision/house-plans): 503 concept house plans as DXF, JSON and CSV
+- [ai-architectures-desktop](https://github.com/20vision/ai-architectures-desktop): AI Architectures desktop app
