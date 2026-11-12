@@ -1,0 +1,17 @@
+{
+  "name": "20vision-skills",
+  "owner": { "name": "20Vision GmbH", "url": "https://www.myclawn.com" },
+  "metadata": { "description": "Agent skills by 20Vision: WCAG audit, free house plans, floor plan CAD, cloud computer tasks." },
+  "plugins": [
+    {
+      "name": "20vision-skills",
+      "source": "./",
+      "description": "WCAG audit, free house, tiny house, cabin and ADU plans, floor plan CAD, cloud computer tasks and an open-source task picker.",
+      "version": "1.0.0",
+      "homepage": "https://github.com/20vision/skills",
+      "keywords": ["skills", "wcag", "accessibility", "house-plans", "floor-plan", "cad", "adu", "cabin"],
+      "strict": false,
+      "skills": "./skills"
+    }
+  ]
+}

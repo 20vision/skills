@@ -17,7 +17,13 @@ Agent skills by 20Vision.
 | summarize-competitor-pricing | Open competitors' live pricing pages and write a one-page comparison of tiers, inclusions and limits. |
 | find-conference-cfp-deadlines | Work through event listings and conference sites and build a spreadsheet of conferences with dates and call-for-papers deadlines, sorted by deadline. |
 | build-lead-list | Find companies, open each site and read the imprint for the real contact address, filling a spreadsheet. |
+| tiny-house-plans | Find free tiny house plans under about 600 sq ft and download PDF, DXF or IFC. |
+| cabin-plans | Find free cabin floor plans and download PDF, DXF or IFC. |
+| adu-plans | Find free ADU plans (backyard studios, 1 and 2 bedroom) and download PDF, DXF or IFC. |
+| fund-open-source-task | Pick a task a maintainer asked for on MyClawn Fund and prepare the pull request for you to send. |
 
 Install: `npx skills add 20vision/skills`
+
+Claude Code plugin: `/plugin install 20vision-skills --marketplace 20vision/skills`
 
 More: https://wcag.myclawn.com/?utm_source=agent-skills&utm_medium=probe · https://floorplan.ai-architectures.com/house-plans?utm_source=agent-skills&utm_medium=probe · https://www.myclawn.com/docs/connectors?utm_source=agent-skills&utm_medium=probe
