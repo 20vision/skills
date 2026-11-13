@@ -7,14 +7,16 @@ description: Check a web page against WCAG 2.2 and return the failures by succes
 
 Runs the free instant check of wcag.myclawn.com on one public page and reports what failed. The instant check of one page is free; the audit of the whole site with fix files and a dated report is paid on the site.
 
+## Network access
+
+This skill talks to one outside host and no other: `wcag.myclawn.com`, the checker itself. It sends the page address the user gave and reads the result back. Nothing else leaves the machine, no file is written and no shell command is run; use the assistant's own web request tool.
+
 ## Steps
 
 1. Get one public page address from the user (https). Private or internal addresses cannot be checked. The service is offered to businesses outside the EU and EEA.
-2. Start the check:
-   `curl -s -X POST https://wcag.myclawn.com/api/preview -H 'Content-Type: application/json' -d '{"url":"<address>"}'`
+2. Start the check with one web request: POST to `https://wcag.myclawn.com/api/preview`, header `Content-Type: application/json`, body `{"url":"<address>"}`.
    The answer holds `id` and `token`. (If it already holds a `result`, go to step 4.)
-3. Poll every 5 seconds, up to about 2 minutes, until `status` is `done` or `error`:
-   `curl -s "https://wcag.myclawn.com/api/preview/<id>?t=<token>"`
+3. Poll with a GET request to `https://wcag.myclawn.com/api/preview/<id>?t=<token>` every 5 seconds, up to about 2 minutes, until `status` is `done` or `error`.
    Limits: 5 checks per hour. If the answer is code `rate`, say so and stop.
 4. Report from `result`: page title, standard (WCAG 2.2 AA), `counts`, then every entry of `issues` as: success criterion (`sc`, `sc_name`, level), severity, who is affected, how many elements (`count`), one example element (`detail.html`) and its fix (`detail.fix_html` and `detail.note`). Order by severity.
 5. If `issues` is empty, say that this automated check found nothing on that page. It checks one page and cannot judge everything; a clean result is not a conformance statement.
